@@ -29,9 +29,9 @@ function checkSims(sims) {
 	should(sims).be.an.Array;
 	sims.forEach(function (sim) {
 		should(sim).be.an.Object;
-		should(sim).have.keys('udid', 'name', 'version', 'type', 'deviceType', 'deviceName', 'deviceDir', 'model', 'family', 'supportsXcode', 'supportsWatch', 'watchCompanion', 'runtime', 'runtimeName', 'systemLog', 'dataDir');
+		should(sim).have.keys('udid', 'name', 'version', 'type', 'deviceType', 'deviceName', 'deviceDir', 'model', 'family', 'supportsXcode', 'supportsWatch', 'watchCompanion', 'runtime', 'runtimeName', 'systemLog', 'dataDir', 'state');
 
-		['udid', 'name', 'version', 'state', 'deviceType', 'deviceName', 'deviceDir', 'model', 'family', 'runtime', 'runtimeName', 'xcode', 'systemLog', 'dataDir'].forEach(function (key) {
+		['udid', 'name', 'version', 'state', 'deviceType', 'deviceName', 'deviceDir', 'model', 'family', 'runtime', 'runtimeName', 'xcode', 'systemLog', 'dataDir', 'state'].forEach(function (key) {
 			if (sim[key] !== null) {
 				should(sim[key]).be.a.String;
 				should(sim[key]).not.equal('');
